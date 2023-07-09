@@ -1,10 +1,6 @@
 @extends('layout.app')
 @section('content')
-<style>
-    .suppliers td{
-        text-transform: capitalize;
-    }
-    </style>
+
 
  <!-- Begin Page Content -->
  <div class="container-fluid">
@@ -19,6 +15,8 @@
             </form>
         </div>
     </div>
+
+
    {{-- <div class="row">
         <div class="col-md-12">
         <a href="#" class="btn btn-success" 
@@ -27,6 +25,8 @@
         Import Employees </a>
     </div>
     </div>  --}}
+
+
     <div class="row">
         <div class="col-md-12">
         <a href="{{route('employees.export')}}" class="btn btn-warning" 
