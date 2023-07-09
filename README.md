@@ -19,17 +19,13 @@ You are tasked with creating a simple blog application using Laravel. The blog a
 
 ## Tech Stack
 
-**Client:** HTML, CSS, JavaScript, jQuery, VueJs, Bootstrap 4
+**Tech:** HTML, CSS, JavaScript, jQuery, VueJs, Bootstrap 4
 
 **Server:** PHP, Laravel 9
 
-**DataBase:** MySql
-
+**DataBase:** MySQL
 
 ## Installation
-
-Install Tech-Admin With Simple Steps
-
 
 Install All Packages of laravel
 ```bash
@@ -51,8 +47,8 @@ All Set ! now serve laravel app on local and open app in browser.
 
 Login With Admin
 ```bash
-Username - admin@admin.com
-Password - Admin@123#
+Username - softlinks@admin.com
+Password - 123456
 ```
 ## Screenshots
 
@@ -65,13 +61,4 @@ Password - Admin@123#
 ![App Screenshot](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5w9yy33y0fspnnl68t0m.png)
 
 ![App Screenshot](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/v5p71gck63r039mk6jix.png)
-
-## Feedback
-
-If you have any feedback, please reach out to us at techtoolindia@gmail.com
-
-
-## Support
-
-For support, email techtoolindia@gmail.com or join our facebook chanel https://www.facebook.com/techtoolindia.
 
