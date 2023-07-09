@@ -95,38 +95,11 @@
     <!-- Custom scripts for all pages-->
     <script src="{{asset('frontend/js/sb-admin-2.min.js')}}"></script>
 
-    <!-- Page level plugins -->
-   {{-- <script src="{{asset('frontend/vendor/chart.js/Chart.min.js')}}"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="{{asset('frontend/js/demo/chart-area-demo.js')}}"></script>
-    <script src="{{asset('frontend/js/demo/chart-pie-demo.js')}}"></script>--}}
      <!-- Page level plugins -->
      <script src="{{asset('frontend/vendor/datatables/jquery.dataTables.min.js')}}"></script>
      <script src="{{asset('frontend/vendor/datatables/dataTables.bootstrap4.min.js')}}"></script>
      <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-     <script>
-       
-          var availableTags = [];
-          $.ajax({
-                method: "GET",
-                url: "{{route('product-list')}}",
-
-  
-            success: function (response){
-               // console.log(response);
-            startAutocomplete(response);
-            }
-    });
-    function startAutocomplete(availableTags)
-    {
-
-          $( "#search_product" ).autocomplete({
-            source: availableTags
-          });
-        }
-       
-        </script>
+     
      @yield('script')
 
      <!-- Page level custom scripts -->

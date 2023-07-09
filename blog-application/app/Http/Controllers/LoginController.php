@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\UserModel;
+use App\Models\User;
 
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
@@ -21,7 +21,7 @@ class LoginController extends Controller
                 'email' => 'required',
                 'password' => 'required',
             ]);
-            $admin = UserModel::where('email', $request->email)->first();
+            $admin = User::where('email', $request->email)->first();
             if (!$admin || !Hash::check($request->password, $admin->password)) {
                 // dd($admin->password); 
                 return response()->json([

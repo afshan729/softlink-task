@@ -6,21 +6,7 @@
         <i class="fa fa-bars"></i>
     </button>
 
-    <!-- Topbar Search -->
-    <form  action="{{route('search-product')}}" method="post"
-        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-       @csrf
-        <div class="input-group">
-            <input id="search_product" type="search" class="form-control bg-light border-0 small" 
-            placeholder="Search for available stock..."
-              name="product_name"  required>
-            <div class="input-group-append">
-                <button class="btn btn-primary" type="submit">
-                    <i class="fas fa-search fa-sm"></i>
-                </button>
-            </div>
-        </div>
-    </form>
+   
 
     <!-- Topbar Navbar -->
     <ul class="navbar-nav ml-auto">
@@ -144,7 +130,7 @@
                     {{Session::get('admin')['firstname']}} {{Session::get('admin')['lastname']}}
                 </span>
                 <img class="img-profile rounded-circle"
-                    src="{{asset('frontend/img/admin.avif')}}">
+                    src="{{asset('frontend/img/undraw_profile.svg')}}">
             </a>
             <!-- Dropdown - User Information -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"

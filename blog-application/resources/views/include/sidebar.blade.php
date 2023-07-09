@@ -28,91 +28,20 @@
             <!-- Nav Item - Pages Collapse Menu -->
           
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
-                    aria-expanded="true" aria-controls="collapseThree">
-                    <i class="fas fa-fw fa-users"></i>
-                    <span>Users</span>
-                </a>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">USERS</h6>
-                        <a class="collapse-item" href="{{route('view-users')}}">View Users</a>
-                        {{-- <a class="collapse-item" href="#">View Editors</a> --}}
-                        <a class="collapse-item" href="{{route('view-roles')}}">User Roles</a>
-
-
-                    </div>
-                </div>
-            </li>
+           
 
              <!-- Nav Item - Single Page Menu -->
              
             <li class="nav-item">
-                <a class="nav-link collapsed" href="{{route('product')}}">
-                    <i class="fas fa-camera"></i>
-                    <span>Products</span>
+                <a class="nav-link collapsed" href="#">
+                    <i class="fas fa-users"></i>
+                    <span>Employees</span>
                 </a>
             </li>
 
             
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsefour"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-file-alt"></i>
-                    <span>Inventory</span>
-                </a>
-                <div id="collapsefour" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">INVENTORY</h6>
-                        <a class="collapse-item" href="{{route('inventory')}}">Inventory In</a>
-                        <a class="collapse-item" href="{{route('all-inventory')}}">Overall Inventory</a>
-                        <a class="collapse-item" href="{{route('faulty-inventory')}}">Faulty Inventory</a>
-                        <a class="collapse-item" href="{{route('return-inventory')}}">Return Inventory</a>
-                        <a class="collapse-item" href="{{route('inventory-status')}}">Inventory Status</a>
-
-
-                    </div>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="{{route('suppliers')}}">
-                    <i class="fas fa-truck"></i>
-                    <span>Suppliers</span>
-                </a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="{{route('warehouses')}}">
-                    <i class="fas fa-home"></i>
-                    <span>WareHouses</span>
-                </a>
-            </li>
-            
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="{{route('stores')}}">
-                    <i class="fas fa-store"></i>
-                    <span>Stores</span>
-                </a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-file-alt"></i>
-                    <span>Orders</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">ORDERS</h6>
-                        <a class="collapse-item" href="{{route('all-orders')}}">All Orders</a>
-                        <a class="collapse-item" href="{{route('remaining-orders')}}">Remaining Orders</a>
-                        <a class="collapse-item" href="{{route('dispatch-orders')}}">Dispatched Orders</a>
-                        <a class="collapse-item" href="{{route('dispatch-centers')}}">Dispatched Centers</a>
-
-                    </div>
-                </div>
-            </li>
+           
+          
             <!-- Divider -->
             <hr class="sidebar-divider">
 
