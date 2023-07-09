@@ -8,11 +8,17 @@ You are tasked with creating a simple blog application using Laravel. The blog a
 ## Features
 
 •	View all Employees
+
 •	Create a new Employee
+
 •	Edit an existing Employee
+
 •	Delete an Employee
+
 •	Import Employee from a CSV file
+
 •	Export all Employee to a Excel file
+
 •	Attach a file to employee doc
 
 
