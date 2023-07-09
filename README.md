@@ -58,7 +58,5 @@ Password - 123456
 ```
 ## Screenshots
 
-![App Screenshot](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/53d53unbwjsvz2t0npan.png)
 
-
-![Alt text](image.png)
+![App Screenshot](image-1.png)
