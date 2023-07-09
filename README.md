@@ -59,4 +59,5 @@ Password - 123456
 ## Screenshots
 
 
-![App Screenshot](image-1.png)
+
+![App Screenshot](image.png)
