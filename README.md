@@ -53,7 +53,7 @@ All Set ! now serve laravel app on local and open app in browser.
 
 Login With Admin
 ```bash
-Username - softlinks@admin.com
+Email - softlinks@admin.com
 Password - 123456
 ```
 ## Screenshots
