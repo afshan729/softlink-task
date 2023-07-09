@@ -17,16 +17,6 @@
     </div>
 
 
-   {{-- <div class="row">
-        <div class="col-md-12">
-        <a href="#" class="btn btn-success" 
-        style="float:right;margin-bottom: 10px; " 
-        data-toggle="tooltip" data-placement="top" title="Import from csv file">
-        Import Employees </a>
-    </div>
-    </div>  --}}
-
-
     <div class="row">
         <div class="col-md-12">
         <a href="{{route('employees.export')}}" class="btn btn-warning" 

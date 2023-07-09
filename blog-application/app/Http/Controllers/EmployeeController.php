@@ -7,8 +7,6 @@ use App\Models\Department;
 
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
 use App\Exports\EmployeesExport;
 use App\Imports\EmployeesImport;
 
@@ -54,14 +52,14 @@ class EmployeeController extends Controller
     ]);
 
 
-          // Create a new employee instance
-    $employee = new Employee();
-    $employee->full_name = $validatedData['full_name'];
-    $employee->email = $validatedData['email'];
-    $employee->phone = $validatedData['phone'];
-    $employee->salary = $validatedData['salary'];
-    $employee->department_id = $validatedData['department_id'];
-    $employee->status = $validatedData['status'];
+            // Create a new employee instance
+            $employee = new Employee();
+            $employee->full_name = $validatedData['full_name'];
+            $employee->email = $validatedData['email'];
+            $employee->phone = $validatedData['phone'];
+            $employee->salary = $validatedData['salary'];
+            $employee->department_id = $validatedData['department_id'];
+            $employee->status = $validatedData['status'];
 
         // Handle attachment file upload
         if ($request->file('employee_doc')) {
@@ -150,7 +148,7 @@ class EmployeeController extends Controller
         return Excel::download(new EmployeesExport(), 'employees.xlsx');
         }
 
-        
+
         //Import Employees from a csv file
         public function import() 
         {
