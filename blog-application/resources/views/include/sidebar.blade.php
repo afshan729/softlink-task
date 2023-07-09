@@ -33,7 +33,7 @@
              <!-- Nav Item - Single Page Menu -->
              
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#">
+                <a class="nav-link collapsed" href="{{route('employees')}}">
                     <i class="fas fa-users"></i>
                     <span>Employees</span>
                 </a>

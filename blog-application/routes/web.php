@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\EmployeeController;
+
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 
@@ -36,6 +38,14 @@ Route::group(['middleware' => ['admin.pages']], function() {
     });
 
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+
+    //employees pages
+    Route::get('/employees', [EmployeeController::class, 'index'])->name('employees');
+    Route::match(['get', 'post'], 'add-employee', [EmployeeController::class, 'store'])->name('add-employee');
+    Route::get('delete-employee', [EmployeeController::class, 'destroy'])->name('delete-employee');
+    Route::match(['get', 'post'], 'edit-employee/{id}', [EmployeeController::class, 'update'])->name('edit-employee');
+    //Route::get('/employees/export', [EmployeeController::class, 'export'])->name('employees.export');
+
 
 });
 
