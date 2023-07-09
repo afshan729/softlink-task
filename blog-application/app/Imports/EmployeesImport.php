@@ -16,7 +16,8 @@ class EmployeesImport implements ToModel, WithHeadingRow
     public function model(array $row)
     {
         return new Employee([
-                'full_name' => $row['name'],
+            
+                'full_name' => $row['full_name'],
                 'email'    => $row['email'], 
                 'phone' => $row['phone'], 
                 'salary' => $row['salary'], 

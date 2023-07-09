@@ -8,14 +8,25 @@
 
  <!-- Begin Page Content -->
  <div class="container-fluid">
-    
-    <div class="row">
+    <div class="card bg-light mt-3">
+        
+        <div class="card-body">
+            <form action="{{ route('employees.import') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+                <input type="file" name="file" class="form-control">
+                <br>
+                <button class="btn btn-success">Import Employees</button>
+            </form>
+        </div>
+    </div>
+   {{-- <div class="row">
         <div class="col-md-12">
         <a href="#" class="btn btn-success" 
-        style="float:right;margin-bottom: 10px; " data-toggle="tooltip" data-placement="top" title="Import from csv file">
+        style="float:right;margin-bottom: 10px; " 
+        data-toggle="tooltip" data-placement="top" title="Import from csv file">
         Import Employees </a>
     </div>
-    </div>  
+    </div>  --}}
     <div class="row">
         <div class="col-md-12">
         <a href="{{route('employees.export')}}" class="btn btn-warning" 

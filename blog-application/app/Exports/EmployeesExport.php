@@ -19,9 +19,10 @@ class EmployeesExport implements FromCollection, WithHeadings
             'ID',
             'Full Name',
             'Email',
+            'Phone',
             'Department',
             'Salary',
-            'Phone',
+            
         ];
     }
 }
