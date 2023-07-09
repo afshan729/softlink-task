@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use App\Exports\EmployeesExport;
+use App\Imports\EmployeesImport;
+
+use Maatwebsite\Excel\Facades\Excel; 
+
 
 class EmployeeController extends Controller
 {
@@ -23,14 +28,7 @@ class EmployeeController extends Controller
         return view('pages.employees.employees', compact('employee'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
+   
     /**
      * Store a newly created resource in storage.
      */
@@ -146,7 +144,19 @@ class EmployeeController extends Controller
         return response()->json("Done");
     }
 
-    //Export all Employee to a Excel file
-    
+        //Export all Employee to a Excel file
+        public function exportEmployees()
+        {
+        return Excel::download(new EmployeesExport(), 'employees.xlsx');
+        }
+
+        
+        //Import Employees from a csv file
+        public function import() 
+        {
+        Excel::import(new EmployeesImport,request()->file('file'));
+
+        return back();
+        }
 
 }

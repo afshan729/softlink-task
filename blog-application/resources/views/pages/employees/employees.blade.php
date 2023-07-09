@@ -18,7 +18,7 @@
     </div>  
     <div class="row">
         <div class="col-md-12">
-        <a href="#" class="btn btn-warning" 
+        <a href="{{route('employees.export')}}" class="btn btn-warning" 
         style="float:right;margin-bottom: 10px; " data-toggle="tooltip" data-placement="top" title="Export in excel file">
         Export Employees </a>
     </div>
