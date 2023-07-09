@@ -8,19 +8,27 @@
 
  <!-- Begin Page Content -->
  <div class="container-fluid">
+    
+    <div class="row">
+        <div class="col-md-12">
+        <a href="#" class="btn btn-warning" 
+        style="float:right;margin-bottom: 10px; " data-toggle="tooltip" data-placement="top" title="Export in excel file">
+        Export Employees </a>
+    </div>
+    </div>   
+
+    <div class="row">
+        <div class="col-md-12">
+        <a href="#" class="btn btn-success" 
+        style="float:right;margin-bottom: 10px; " data-toggle="tooltip" data-placement="top" title="Import from csv file">
+        Import Employees </a>
+    </div>
+    </div>   
 
     <div class="row">
         <div class="col-md-12">
         <a href="{{route('add-employee')}}" class="btn btn-primary" 
         style="float:right;margin-bottom: 10px; " data-toggle="tooltip" data-placement="top" title="Add">Create a new Employee </a>
-    </div>
-    </div>   
-    
-    <div class="row">
-        <div class="col-md-12">
-        <a href="#" class="btn btn-warning" 
-        style="float:right;margin-bottom: 10px; " data-toggle="tooltip" data-placement="top" title="Export">
-        Export Employees </a>
     </div>
     </div>   
     <!-- DataTales Example -->
@@ -81,6 +89,13 @@
                                </td>   
 
                             <td>
+
+                               
+                                <a href="{{ asset('employees/documents/' . $value->attachment) }}" 
+                                    class="btn btn-warning btn-sm " 
+                                     data-toggle="tooltip" data-placement="top" title="Download"  target="_blank">
+                                    <i class="fa fa-download"></i></a>
+                               
                                 <a href="{{route('edit-employee', ['id' => $value->id])}}" 
                                     class="btn btn-success btn-sm " type="button" 
                                     data-toggle="tooltip" data-placement="top" title="Edit">

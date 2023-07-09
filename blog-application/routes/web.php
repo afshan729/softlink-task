@@ -40,7 +40,7 @@ Route::group(['middleware' => ['admin.pages']], function() {
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
 
     //employees pages
-    Route::get('/employees', [EmployeeController::class, 'index'])->name('employees');
+    Route::get('/employee', [EmployeeController::class, 'index'])->name('employee');
     Route::match(['get', 'post'], 'add-employee', [EmployeeController::class, 'store'])->name('add-employee');
     Route::get('delete-employee', [EmployeeController::class, 'destroy'])->name('delete-employee');
     Route::match(['get', 'post'], 'edit-employee/{id}', [EmployeeController::class, 'update'])->name('edit-employee');

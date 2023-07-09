@@ -20,6 +20,7 @@ return new class extends Migration
             $table->unsignedBigInteger('department_id');
             $table->foreign('department_id')->references('id')->on('departments');
             $table->boolean('status')->default(false);
+            $table->string('attachment')->nullable();
             $table->timestamps();
         });
     }

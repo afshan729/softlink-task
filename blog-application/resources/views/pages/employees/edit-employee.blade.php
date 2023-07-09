@@ -7,7 +7,7 @@
     }
     </style>
     <div class="container-fluid">
-        <a href="{{route('employees')}}">Go Back</a>
+        <a href="{{route('employee')}}">Go Back</a>
         <div class="card shadow mb-4">
             @foreach ($employee as $value )
             <div class="card-header py-3">
@@ -39,6 +39,8 @@
                         @endif
                     </div>
                 </div>
+
+              
 
                 
                 <form  method="post" id="editEmployerForm" >

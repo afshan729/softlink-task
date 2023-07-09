@@ -9,7 +9,7 @@
     }
     </style>
     <div class="container-fluid">
-        <a href="{{route('employees')}}">Go Back</a>
+        <a href="{{route('employee')}}">Go Back</a>
         <div class="card shadow mb-4">
             <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary">Create a new Employee </h6>
@@ -41,9 +41,19 @@
                     </div>
                 </div>
 
-                <form action="{{route('add-employee')}}" method="post" >
+                <form action="{{route('add-employee')}}" method="post"  enctype="multipart/form-data">
                     @csrf
                 <div class="row">
+                        <div class="col-12">
+                           
+                            <div class="form-group">
+                                <label for="employee_doc">Upload Document<b class="text-danger">(Required)</b> &nbsp;&nbsp;<i
+                                        class="fa fa-2x fa-upload" aria-hidden="true" style="cursor: pointer"></i>
+                                    <span id="img-info" class="text-secondary"></span></label>
+                                <input type="file" id="employee_doc" name="employee_doc" style="display: none"
+                     onchange="$('#img-info').text(this.files[0].name)" >
+                            </div>
+                        </div>
                 <div class="col-md-6">
 
                 <div class="form-group">

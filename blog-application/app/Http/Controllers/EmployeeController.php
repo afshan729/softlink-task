@@ -7,6 +7,8 @@ use App\Models\Department;
 
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class EmployeeController extends Controller
 {
@@ -49,6 +51,8 @@ class EmployeeController extends Controller
                         'regex:/^\d+(\.\d{1,2})?$/'],
         'department_id' => 'required|exists:departments,id',
         'status' => 'required',
+        'attachment' => 'file|mimes:pdf,doc,docx|max:2048', // Add allowed file types and size limit
+
     ]);
 
 
@@ -60,6 +64,17 @@ class EmployeeController extends Controller
     $employee->salary = $validatedData['salary'];
     $employee->department_id = $validatedData['department_id'];
     $employee->status = $validatedData['status'];
+
+        // Handle attachment file upload
+        if ($request->file('employee_doc')) {
+            $fileName = time() . rand(1, 999) . '_' . $request->file('employee_doc')->getClientOriginalName();
+            $request->file('employee_doc')->move(base_path('public/employees/documents/'), $fileName);
+            $employee->attachment = $fileName;
+
+        }
+        
+
+
     // Save the employee
     $employee->save();
     return redirect()->route('add-employee')
