@@ -9,13 +9,13 @@
         <div class="card-body">
             <form action="{{ route('employees.import') }}" method="POST" enctype="multipart/form-data">
                 @csrf
-                <input type="file" name="file" class="form-control">
-                <br>
-                <button class="btn btn-success">Import Employees</button>
+                <input type="file" name="file" class="">
+                <br><br>
+                <button type="submit" class="btn btn-success">Import Employees</button>
             </form>
         </div>
     </div>
-
+<br>
 
     <div class="row">
         <div class="col-md-12">

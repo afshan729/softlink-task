@@ -151,10 +151,45 @@ class EmployeeController extends Controller
 
         //Import Employees from a csv file
         public function import() 
-        {
-        Excel::import(new EmployeesImport,request()->file('file'));
+     {
+            $file_n = request()->file('file');
+            //$file = fopen($file_n, "r");
+            $all_data = [];
 
-        return back();
+            if ($file_n) {
+                $handle = fopen($file_n->getRealPath(), "r");
+            
+            while (($data = fgetcsv($handle, 200, ",")) !==FALSE) {
+
+                $full_name = $data[0];
+                $email = $data[1];
+                $phone = $data[2];
+                $salary = $data[3];
+                $department_id = $data[4];
+                $status = $data[5];
+                $attachment = $data[6];
+                $all_data[] = $full_name. " ".$email. " ".$phone. " ".$salary. " ".$department_id. " ".$status. " ".$attachment;
+                //dd($all_data);
+                //array_push($array, $all_data);
+                $employee = new Employee();
+                $employee->full_name = $full_name;
+                $employee->email = $email;
+                $employee->phone = $phone;
+                $employee->salary = $salary;
+                $employee->department_id = $department_id;
+                $employee->status = $status;
+                $employee->attachment = $attachment;
+                $employee->save();
+
+                return back();
+            }
+            fclose($handle);
+
+        }
+            
+                // $all_data now contains the names and cities from the CSV file
+                // Excel::import(new EmployeesImport,request()->file('file'));
+                // return back();
         }
 
 }
