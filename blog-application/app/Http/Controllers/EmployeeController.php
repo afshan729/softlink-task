@@ -21,9 +21,9 @@ class EmployeeController extends Controller
     public function index()
     {
         //All employees should be listed in descending order by their creation date.
-        $employee = Employee::orderBy('created_at', 'desc')->get();
+        $employees = Employee::with('department')->orderBy('created_at', 'desc')->get();
 
-        return view('pages.employees.employees', compact('employee'));
+        return view('pages.employees.employees', compact('employees'));
     }
 
    

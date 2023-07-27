@@ -64,20 +64,23 @@
                         </tr>
                     </tfoot>
                     <tbody>
-                        @foreach ($employee as $value )
-                        <?php
-                        $department=DB::table('departments')->where('id',$value->department_id)->first();
-                        ?>
+                        @foreach ($employees as $employee )
+
+                        <!-- @php
+                        $department=DB::table('departments')->where('id',$employee->department_id)
+                        ->first();
+                        @endphp -->
+
                         <tr>
                             <td>
-                                <input type="hidden" name="id"  value="{{$value->id}}">
-                                {{$value->full_name}}</td>
-                            <td style="text-transform: lowercase">{{$value->email }}</td>
-                            <td>{{$value->phone}}</td>
-                            <td>{{$value->salary}}</td>
-                            <td>{{$department->department_name}}</td>
+                                <input type="hidden" name="id"  value="{{$employee->id}}">
+                                {{$employee->full_name}}</td>
+                            <td style="text-transform: lowercase">{{$employee->email }}</td>
+                            <td>{{$employee->phone}}</td>
+                            <td>{{$employee->salary}}</td>
+                            <td>{{$employee->department->department_name}}</td>
                             <td class="align-middle">
-                                @if ($value->status == 1)
+                                @if ($employee->status == 1)
                                 <div>
                                    <span class="bg-success-transparent text-info px-2 py-1 br-7 border-success">Active</span>
                                </div>
@@ -92,12 +95,12 @@
                             <td>
 
                                
-                                <a href="{{ asset('employees/documents/' . $value->attachment) }}" 
+                                <a href="{{ asset('employees/documents/' . $employee->attachment) }}" 
                                     class="btn btn-warning btn-sm " 
                                      data-toggle="tooltip" data-placement="top" title="Download"  target="_blank">
                                     <i class="fa fa-download"></i></a>
                                
-                                <a href="{{route('edit-employee', ['id' => $value->id])}}" 
+                                <a href="{{route('edit-employee', ['id' => $employee->id])}}" 
                                     class="btn btn-success btn-sm " type="button" 
                                     data-toggle="tooltip" data-placement="top" title="Edit">
                                     <i class="fa fa-edit"></i></a>
