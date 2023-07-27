@@ -66,14 +66,9 @@
                     <tbody>
                         @foreach ($employees as $employee )
 
-                        <!-- @php
-                        $department=DB::table('departments')->where('id',$employee->department_id)
-                        ->first();
-                        @endphp -->
-
                         <tr>
                             <td>
-                                <input type="hidden" name="id"  value="{{$employee->id}}">
+                            <input type="hidden" name="id"  value="{{$employee->id}}">
                                 {{$employee->full_name}}</td>
                             <td style="text-transform: lowercase">{{$employee->email }}</td>
                             <td>{{$employee->phone}}</td>
