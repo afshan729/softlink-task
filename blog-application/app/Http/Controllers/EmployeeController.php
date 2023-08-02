@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use App\Exports\EmployeesExport;
 use App\Imports\EmployeesImport;
-
 use Maatwebsite\Excel\Facades\Excel; 
 
 
@@ -143,21 +142,21 @@ class EmployeeController extends Controller
     }
 
         //Export all Employee to a Excel file
-        public function exportEmployees()
+        public function exportEmployees(Request $request)
         {
-        return Excel::download(new EmployeesExport(), 'employees.xlsx');
+        return Excel::download(new EmployeesExport, 'employees.xlsx');
         }
 
 
         //Import Employees from a csv file
         public function import() 
      {
-            $file_n = request()->file('file');
+            $file = request()->file('file');
             //$file = fopen($file_n, "r");
             $all_data = [];
 
-            if ($file_n) {
-                $handle = fopen($file_n->getRealPath(), "r");
+            if ($file) {
+                $handle = fopen($file->getRealPath(), "r");
             
             while (($data = fgetcsv($handle, 200, ",")) !==FALSE) {
 
