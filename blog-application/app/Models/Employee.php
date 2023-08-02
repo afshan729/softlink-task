@@ -11,10 +11,10 @@ class Employee extends Model
     use HasFactory;
 
 
-    public function department() : BelongsTo
-{
-    return $this->belongsTo(Department::class );
-}
+        public function department() : BelongsTo
+        {
+        return $this->belongsTo(Department::class );
+        }
 
 }
 
